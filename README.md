@@ -1,30 +1,60 @@
-# 📘 Proyecto de Pruebas Automatizadas con Selenium - AutomationExercise
+# Proyecto de Pruebas Automatizadas con Selenium
 
-Este proyecto contiene pruebas automatizadas desarrolladas en **C#** utilizando **Selenium WebDriver**, ejecutadas sobre el sitio [automationexercise.com](https://automationexercise.com/), como parte de una entrega académica.
+Este repositorio contiene un conjunto de pruebas automatizadas usando **Selenium con Python** para el sitio [Automation Exercise](https://automationexercise.com/). Las pruebas cubren funcionalidades básicas como registro, login, búsqueda de productos, agregar al carrito y visualización de detalles de producto.
 
-## 🧪 Historias de Usuario Automatizadas
+## Estructura del proyecto
 
-1. ✅ Como usuario, quiero iniciar sesión para acceder a mi cuenta.
-2. ❌ Como usuario, quiero buscar productos para visualizar resultados relacionados. *(falla por timeout de búsqueda)*
-3. ❌ Como usuario, quiero agregar un producto al carrito para comprarlo después. *(falla al esperar el botón "Continue Shopping")*
-4. ❌ Como usuario, quiero ver los productos en oferta para aprovechar descuentos. *(prueba no incluida o con errores)*
-5. ❌ Como usuario, quiero acceder al detalle de un producto para ver más información. *(prueba no incluida o con errores)*
+```
+📁 tests
+├── 📁 screenshots       # Capturas automáticas de pruebas (éxito/error)
+├── test_main.py         # Archivo principal con los test cases
+```
 
-## ⚙️ Tecnologías Utilizadas
+## Tecnologías y herramientas
 
-- Lenguaje: **C#**
-- Framework: **NUnit**
-- Automatización: **Selenium WebDriver**
-- Navegador: **Google Chrome**
-- Librerías extra:
-  - `Selenium.Support` (para WebDriverWait y ExpectedConditions)
-  - `ExtentReports` (para generación de reportes en HTML)
+- Python 3.10+
+- Selenium WebDriver
+- pytest
+- webdriver-manager
 
-## 📸 Funcionalidades del Proyecto
+## Instalación
 
-- Capturas automáticas de pantalla en cada prueba.
-- Reporte HTML detallado generado tras la ejecución.
-- Pruebas diseñadas con `WebDriverWait` y `ExpectedConditions`.
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/tu_usuario/tu_repositorio.git
+   cd tu_repositorio
+   ```
 
-## 🗂 Estructura del Proyecto
+2. Crear entorno virtual (opcional pero recomendado):
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # En Windows: venv\Scripts\activate
+   ```
 
+3. Instalar dependencias:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Ejecución de pruebas
+
+Desde la raíz del proyecto:
+```bash
+pytest tests/test_main.py --headed
+```
+Esto ejecutará los test cases y generará screenshots en la carpeta `tests/screenshots/`.
+
+## Casos de prueba implementados
+
+- ✅ Registro de usuario (HU-01)
+- ✅ Login con credenciales válidas (HU-02)
+- ✅ Búsqueda de productos (HU-03)
+- ✅ Agregar producto al carrito (HU-04)
+- ✅ Visualizar detalles de producto (HU-05)
+
+## Capturas automáticas
+Las capturas de pantalla se generan automáticamente en cada prueba, ya sea exitosa o fallida, con un zoom-out del 50% para mayor visibilidad.
+
+## Notas adicionales
+- Se deshabilitan extensiones y notificaciones del navegador para evitar interferencias.
+- Se usa `document.body.style.zoom='50%'` y desplazamiento automático para garantizar visibilidad completa del contenido.
