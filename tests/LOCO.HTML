@@ -1,0 +1,144 @@
+     <section id="form" style="margin-top: 100px !important; height: auto !important;">
+          <div class="container" style="height: auto !important;">
+               <div class="row" style="height: auto !important;">
+                    <div class="col-sm-4 col-sm-offset-1" style="height: auto !important; min-height: 0px !important;">
+                         <div class="login-form">
+                              <h2 class="title text-center" style="color: #FE980F;"><b>Enter Account Information</b>
+                              </h2>
+                              <form action="/signup" method="POST">
+                                   <input type="hidden" name="csrfmiddlewaretoken"
+                                        value="TZQ00wROflSeBFZ3E2SSCSKy8QB1kwC2kL2JhoyZKUwqlU7vk8tdiM3SntVjisIt">
+                                   <div class="clearfix">
+                                        <label>Title</label>
+                                        <br>
+                                        <div class="radio-inline">
+                                             <label for="id_gender1" class="top">
+                                                  <div class="radio" style="display:inline-block;" data-qa="title"
+                                                       id="uniform-id_gender1"><span><input type="radio" name="title"
+                                                                 id="id_gender1" value="Mr"></span></div>
+                                                  Mr.
+                                             </label>
+                                        </div>
+                                        <div class="radio-inline">
+                                             <label for="id_gender2" class="top">
+                                                  <div class="radio" style="display:inline-block;" data-qa="title"
+                                                       id="uniform-id_gender2"><span><input type="radio" name="title"
+                                                                 id="id_gender2" value="Mrs"></span></div>
+                                                  Mrs.
+                                             </label>
+                                        </div>
+                                   </div>
+                                   <div class="required form-group">
+                                        <label for="name">Name <sup>*</sup></label>
+                                        <input type="text" class="form-control" id="name" data-qa="name" required=""
+                                             name="name" value="SD">
+                                   </div>
+                                   <div class="required form-group">
+                                        <label for="email">Email <sup>*</sup></label>
+                                        <input type="text" disabled="disabled" class="form-control" data-qa="email"
+                                             id="email" required="" name="email" value="S@G.COM">
+                                        <input type="hidden" name="email_address" value="S@G.COM">
+                                   </div>
+                                   <div class="required form-group">
+                                        <label for="password">Password <sup>*</sup></label>
+                                        <input type="password" class="form-control" data-qa="password" id="password"
+                                             required="" name="password" value="">
+                                   </div>
+                                   <div class="form-group">
+                                        <label>Date of Birth</label>
+                                        <div class="row">
+                                             <div class="col-xs-4">
+                                                  <div class="selector" id="uniform-days" style="width: 82px;">
+                                                       <select data-qa="days" id="days" name="days"
+                                                            class="form-control">                                                         
+                                                       </select>
+                                                  </div>
+                                             </div>
+                                             <div class="col-xs-4">
+                                                  <div class="selector" id="uniform-months" style="width: 88px;">
+                                                       <select data-qa="months" id="months" name="months"
+                                                            class="form-control">
+                                                            
+                                                       </select>
+                                                  </div>
+                                             </div>
+                                             <div class="col-xs-4">
+                                                  <div class="selector" id="uniform-years" style="width: 82px;">
+                                                       <select data-qa="years" id="years" name="years"
+                                                            class="form-control">
+                                                            <option value="">Year</option>
+                                                 </select>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="checkbox">
+                                        <div class="checker" id="uniform-newsletter"><span class=""><input
+                                                       type="checkbox" name="newsletter" id="newsletter"
+                                                       value="1"></span></div>
+                                        <label for="newsletter">Sign up for our newsletter!</label>
+                                   </div>
+                                   <div class="checkbox">
+                                        <div class="checker" id="uniform-optin"><span><input type="checkbox"
+                                                       name="optin" id="optin" value="1"></span></div>
+                                        <label for="optin">Receive special offers from our partners!</label>
+                                   </div>
+                                   <br>
+                                   <h2 class="title text-center" style="color: #FE980F;"><b>Address Information</b></h2>
+                                   <p class="required form-group">
+                                        <label for="first_name">First name <sup>*</sup></label>
+                                        <input type="text" data-qa="first_name" class="form-control" id="first_name"
+                                             name="first_name" required="" value="">
+                                   </p>
+                                   <p class="required form-group">
+                                        <label for="last_name">Last name <sup>*</sup></label>
+                                        <input type="text" data-qa="last_name" class="form-control" id="last_name"
+                                             name="last_name" required="" value="">
+                                   </p>
+                                   <p class="form-group">
+                                        <label for="company">Company</label>
+                                        <input type="text" data-qa="company" class="form-control" id="company"
+                                             name="company" value="">
+                                   </p>
+                                   <p class="required form-group">
+                                        <label for="address1">Address <sup>* </sup><span class="inline-infos"
+                                                  style="color: #f13340; margin: 9px 0 16px 0;">(Street address, P.O.
+                                                  Box, Company name, etc.)</span></label>
+                                        <input type="text" data-qa="address" class="form-control" required=""
+                                             name="address1" id="address1" value="">
+                                   </p>
+                                   <p class="required form-group">
+                                        <label for="address2">Address 2</label>
+                                        <input type="text" data-qa="address2" class="form-control" name="address2"
+                                             id="address2" value="">
+                                   </p>
+                                   <p class="required form-group">
+                                        <label for="country">Country <sup>* </sup></label>
+                                        <select data-qa="country" id="country" name="country" required=""
+                                             class="form-control">
+                         </select>
+                                   </p>
+                                   <p class="required form-group">
+                                        <label for="state">State <sup>* </sup></label>
+                                        <input type="text" data-qa="state" class="form-control" required="" name="state"
+                                             id="state" value="">
+                                   </p>
+                                   <p class="required form-group">
+                                        <label for="city">City <sup>* </sup></label>
+                                        <input type="text" data-qa="city" class="form-control" required="" name="city"
+                                             id="city" value="">
+                                   </p>
+                                   <p class="required form-group">
+                                        <label for="city">Zipcode <sup>* </sup></label>
+                                        <input type="text" data-qa="zipcode" class="form-control" required=""
+                                             name="zipcode" id="zipcode" value="">
+                                   </p>
+                                   <p class="required form-group">
+                                        <label for="mobile_number">Mobile Number <sup>* </sup></label>
+                                        <input type="text" data-qa="mobile_number" class="form-control" required=""
+                                             name="mobile_number" id="mobile_number" value="">
+                                   </p>
+                                   <input type="hidden" name="form_type" value="create_account">
+                                   <button type="submit" data-qa="create-account" class="btn btn-default">Create
+                                        Account</button>
+                              </form>               
