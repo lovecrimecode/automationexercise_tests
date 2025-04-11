@@ -7,7 +7,7 @@ Este repositorio contiene un conjunto de pruebas automatizadas usando **Selenium
 ```
 📁 tests
 ├── 📁 screenshots       # Capturas automáticas de pruebas (éxito/error)
-├── test_main.py         # Archivo principal con los test cases
+├── test_automation.py         # Archivo principal con los test cases
 ```
 
 ## Tecnologías y herramientas
@@ -21,7 +21,7 @@ Este repositorio contiene un conjunto de pruebas automatizadas usando **Selenium
 
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/tu_usuario/tu_repositorio.git
+   git clone (https://github.com/lovecrimecode/automationexercise_tests.git)
    cd tu_repositorio
    ```
 
@@ -31,18 +31,11 @@ Este repositorio contiene un conjunto de pruebas automatizadas usando **Selenium
    source venv/bin/activate  # En Windows: venv\Scripts\activate
    ```
 
-3. Instalar dependencias:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-## Ejecución de pruebas
-
+3. Hacer pruebas, generar reporte en la carpeta `tests/` y screenshots en la carpeta `tests/screenshots/`.
 Desde la raíz del proyecto:
 ```bash
-pytest tests/test_main.py --headed
+pytest --html=report.html
 ```
-Esto ejecutará los test cases y generará screenshots en la carpeta `tests/screenshots/`.
 
 ## Casos de prueba implementados
 
@@ -57,4 +50,3 @@ Las capturas de pantalla se generan automáticamente en cada prueba, ya sea exit
 
 ## Notas adicionales
 - Se deshabilitan extensiones y notificaciones del navegador para evitar interferencias.
-- Se usa `document.body.style.zoom='50%'` y desplazamiento automático para garantizar visibilidad completa del contenido.
