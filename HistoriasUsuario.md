@@ -1,109 +1,82 @@
-# Proyecto: Automatización de pruebas funcionales con Selenium
+# Criterios de Aceptación
 
-## Pruebas automatizadas con Selenium en Python sobre la web [https://automationexercise.com](https://automationexercise.com) para validar funcionalidades comunes como navegación, registro, inicio de sesión, búsqueda y carrito de compras.
+## PA-01: Registro de Usuario
 
----
+**Criterios de aceptación Funcionales:**
+- El sistema debe permitir el registro con nombre, correo electrónico, contraseña, dirección y número de móvil.
+- Al registrar correctamente, se debe mostrar el mensaje “ACCOUNT CREATED!”.
+- El sistema debe almacenar los datos ingresados de forma segura.
 
-## Puntos de Automatización (PA) con criterios de aceptación y rechazo
+**Criterios de aceptación No funcionales:**
+- El tiempo de carga del formulario no debe superar los 2 segundos.
+- El formulario debe ser accesible desde navegadores modernos (Chrome, Firefox, Edge).
 
-### PA 1: Registro de usuario
-
-**Criterios de aceptación funcionales:**
-
-- Se debe mostrar correctamente el formulario de registro.
-- Al ingresar datos válidos, la cuenta debe crearse exitosamente.
-- El mensaje de confirmación debe decir “Account Created!”.
-
-**Criterios de aceptación no funcionales:**
-
-- El proceso no debe tardar más de 5 segundos.
-- Debe funcionar correctamente en los navegadores modernos.
-
-**Criterios de rechazo:**
-
-- Si no se completan los campos obligatorios, no debe permitir el envío.
-- Si el correo ya existe, debe mostrarse un mensaje de error.
-- Si el formato del correo no es válido, el formulario no debe enviarse.
+**De rechazo:**
+- Si los campos obligatorios están vacíos, se debe impedir el registro.
+- Si el correo ya está registrado, se debe mostrar un mensaje de error.
 
 ---
 
-### PA 2: Inicio de sesión
+## PA-02: Iniciar sesión
 
-**Criterios de aceptación funcionales:**
+**Criterios de aceptación Funcionales:**
+- El usuario debe poder iniciar sesión con correo y contraseña válidos.
+- Al iniciar sesión, debe aparecer el texto “Logged in as”.
+- Al cerrar sesión, se debe redirigir a la página de inicio.
 
-- Se deben poder ingresar las credenciales registradas.
-- Al autenticarse correctamente, debe mostrarse “Logged in as [nombre]”.
-- Si los datos son incorrectos, debe mostrarse un mensaje de error.
+**Criterios de aceptación No funcionales:**
+- La autenticación debe completarse en menos de 2 segundos.
+- El formulario debe estar protegido contra ataques de fuerza bruta.
 
-**Criterios de aceptación no funcionales:**
-
-- La respuesta debe darse en menos de 3 segundos.
-- Debe ser accesible mediante teclado.
-
-**Criterios de rechazo:**
-
-- No debe iniciar sesión si algún campo está vacío.
-- No debe permitir caracteres inválidos.
-- Si las credenciales son incorrectas, debe rechazarlas claramente.
+**De rechazo:**
+- Si el correo o la contraseña son incorrectos, se debe impedir el acceso y mostrar un mensaje de error.
+- Si falta algún campo, el botón de login debe estar deshabilitado.
 
 ---
 
-### PA 3: Búsqueda de productos
+## PA-03: Búsqueda de productos
 
-**Criterios de aceptación funcionales:**
+**Criterios de aceptación Funcionales:**
+- El sistema debe permitir ingresar texto en el campo de búsqueda.
+- Al buscar "shirt", debe mostrarse la sección "Searched Products".
 
-- Al escribir en la barra de búsqueda, deben mostrarse productos relacionados.
-- Si no hay coincidencias, debe aparecer un mensaje como “Product not found”.
+**Criterios de aceptación No funcionales:**
+- La respuesta a la búsqueda debe cargarse en menos de 2 segundos.
+- El sistema debe poder manejar búsquedas frecuentes sin errores.
 
-**Criterios de aceptación no funcionales:**
-
-- La búsqueda debe responder en menos de 3 segundos.
-- Debe aceptar tanto palabras completas como parciales.
-
-**Criterios de rechazo:**
-
-- Si se busca usando símbolos extraños, el sitio no debe romperse.
-- Si no se escribe nada, no debe recargarse la página.
-- Si no hay resultados, debe mostrarse un mensaje claro.
+**De rechazo:**
+- Si se busca un término inexistente, debe mostrarse un mensaje como “No se encontraron resultados”.
+- Si se intenta buscar sin escribir nada, no se debe ejecutar la búsqueda.
 
 ---
 
-### PA 4: Agregar productos al carrito
+## PA-04: Agregar producto al carrito
 
-**Criterios de aceptación funcionales:**
+**Criterios de aceptación Funcionales:**
+- El sistema debe mostrar un botón “Add to cart” en cada producto.
+- Al hacer clic, debe mostrarse un modal de confirmación.
+- El carrito debe reflejar el producto añadido correctamente.
 
-- Al hacer clic en “Add to cart”, debe mostrarse una confirmación.
-- Los productos agregados deben aparecer correctamente en el carrito.
-- Debe ser posible eliminar productos del carrito.
+**Criterios de aceptación No funcionales:**
+- El modal debe abrirse en menos de 1 segundo tras hacer clic.
+- El sistema debe seguir siendo funcional si se agregan múltiples productos rápidamente.
 
-**Criterios de aceptación no funcionales:**
-
-- El botón debe poder activarse con el teclado.
-- El contenido del carrito debe mantenerse mientras se navega por el sitio.
-
-**Criterios de rechazo:**
-
-- No debe permitirse agregar productos sin seleccionar cantidad.
-- No debe aceptar cantidades negativas.
-- Si el producto está agotado, no debe permitirse su adición.
+**De rechazo:**
+- Si el producto ya está en el carrito, se debe evitar el duplicado o notificarlo.
+- Si el botón falla, debe mostrarse un mensaje de error amigable.
 
 ---
 
-### PA 5: Ver detalle de un producto
+## PA-05: Ver detalle del producto
 
-**Criterios de aceptación funcionales:**
+**Criterios de aceptación Funcionales:**
+- El usuario debe poder acceder al detalle de un producto desde la lista.
+- El detalle debe mostrar nombre, categoría y demás información clave.
 
-- Al hacer clic en un producto, debe cargarse la vista detallada.
-- Debe mostrarse el nombre, precio, disponibilidad y descripción del producto.
-- Desde esa vista, debe poder seleccionarse la cantidad y agregar al carrito.
+**Criterios de aceptación No funcionales:**
+- El detalle del producto debe cargarse en menos de 2 segundos.
+- Debe ser legible y adaptarse a distintos tamaños de pantalla.
 
-**Criterios de aceptación no funcionales:**
-
-- La página debe cargar en menos de 2 segundos.
-- Debe visualizarse correctamente en dispositivos móviles.
-
-**Criterios de rechazo:**
-
-- Si se accede a un producto inexistente, debe mostrarse una página de error.
-- Si no carga la información, debe mostrarse un mensaje de advertencia.
-- No debe permitirse agregar al carrito sin indicar una cantidad.
+**De rechazo:**
+- Si el producto no existe, debe mostrarse un mensaje de error o redirección.
+- Si hay un error en la carga, se debe mostrar una alerta clara al usuario.

@@ -190,7 +190,7 @@ def test_search_products(driver):
         take_screenshot(driver, "search_products_success")
 
     except Exception as e:
-        print("❌ Error en test_search_products:", e)
+        print("Error en test_search_products:", e)
         take_screenshot(driver, "search_products_error")
         # Puedes dejar esto como "falla tolerada"
 
@@ -214,10 +214,10 @@ def test_add_to_cart(driver):
             continue_btn.click()
             take_screenshot(driver, "add_to_cart_success")
         else:
-            raise Exception("❌ No se encontraron botones para agregar al carrito.")
+            raise Exception("No se encontraron botones para agregar al carrito.")
 
     except Exception as e:
-        print("❌ Error en test_add_to_cart:", e)
+        print("Error en test_add_to_cart:", e)
         take_screenshot(driver, "add_to_cart_error")
         # Igual, falla tolerada
 
