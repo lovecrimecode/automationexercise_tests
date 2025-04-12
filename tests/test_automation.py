@@ -42,7 +42,7 @@ def take_screenshot(driver, test_name):
     driver.get_screenshot_as_file(screenshot_path)
 
 
-# HU-01: Registro de Usuario
+# PA-01: Registro de Usuario
 def test_user_registration(driver):
     try:
         driver.get("https://automationexercise.com/signup")
@@ -96,7 +96,7 @@ def test_user_registration(driver):
         take_screenshot(driver, "user_registration_error")
         raise
 
-# HU-02: Iniciar sesión
+# PA-02: Iniciar sesión
 def test_user_login(driver):
     try:
         # 1. Navegar a la página de login
@@ -165,7 +165,7 @@ def test_user_login(driver):
         print(f"Error durante el login: {str(e)}")
         raise
 
-# HU-03: Búsqueda de productos
+# PA-03: Búsqueda de productos
 def test_search_products(driver):
     try:
         driver.get("https://automationexercise.com/products")
@@ -194,7 +194,7 @@ def test_search_products(driver):
         take_screenshot(driver, "search_products_error")
         # Puedes dejar esto como "falla tolerada"
 
-# HU-04: Agregar producto al carrito
+# PA-04: Agregar producto al carrito
 def test_add_to_cart(driver):
     try:
         driver.get("https://automationexercise.com/products")
@@ -221,7 +221,7 @@ def test_add_to_cart(driver):
         take_screenshot(driver, "add_to_cart_error")
         # Igual, falla tolerada
 
-# HU-05: Ver detalle del producto
+# PA-05: Ver detalle del producto
 def test_view_product_details(driver):
     driver.get("https://automationexercise.com/products")
 
