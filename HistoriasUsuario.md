@@ -1,4 +1,8 @@
-# Criterios de Aceptación
+## Objetivo general
+
+Realizar pruebas automatizadas con Selenium en Python sobre la web [https://automationexercise.com](https://automationexercise.com) para validar funcionalidades comunes como navegación, registro, inicio de sesión, búsqueda y carrito de compras. Se utilizará Jira para la gestión de requerimientos, tareas y puntos de automatización.
+
+# Historias de usuario
 
 ## PA-01: Registro de Usuario
 
